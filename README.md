@@ -27,21 +27,21 @@
 
         http://127.0.0.1:9090/log/save \
 
-  -H 'Content-Type: application/json;charset=UTF-8' \
+        -H 'Content-Type: application/json;charset=UTF-8' \
 
-  -H 'Postman-Token: b6ae2eeb-12d9-4049-8148-1101c9cb5388' \
+        -H 'Postman-Token: b6ae2eeb-12d9-4049-8148-1101c9cb5388' \
 
-  -H 'cache-control: no-cache' \
+        -H 'cache-control: no-cache' \
 
-  -H 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \
+        -H 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \
 
-  -F key=3817848ef191468810fc4b1cfc855ba1 \
+        -F key=3817848ef191468810fc4b1cfc855ba1 \
 
-  -F 'tag=测试mysql' \
+        -F 'tag=测试mysql' \
 
-  -F value=ok \
+        -F value=ok \
 
-  -F request_id=dfeeeeeeeee 
+        -F request_id=dfeeeeeeeee 
 
 ###es-7.3.1 es工厂模式 
 
