@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration >
+    <properties url="file:////Users/jiasion/java/brand-log/src/main/resources/mybatisGen/generatorConfig.properties"/>
+
+    <!-- 驱动包配置 -->
+    <classPathEntry location="${datasource.driverClassPath}" />
+
+    <context id="context1" >
+        <!-- 抑制注释的生成 -->
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <jdbcConnection driverClass="${datasource.driverClass}" connectionURL="${datasource.jdbcUrl}"
+                        userId="${datasource.user}" password="${datasource.password}" />
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="true" />
+        </javaTypeResolver>
+        <!-- domain配置 -->
+        <javaModelGenerator targetPackage="${modulePackage}" targetProject="${targetProject}" />
+        <!-- 映射xml配置 -->
+        <sqlMapGenerator targetPackage="${sqlMapperPackage}" targetProject="${xmlTargetProject}" />
+        <!-- dao层配置 -->
+        <javaClientGenerator targetPackage="${daoMapperPackage}" type="XMLMAPPER" targetProject="${targetProject}"/>
+
+
+        <table tableName="t_log">
+        </table>
+
+        <!-- <table schema="" tableName="settlement_detail" enableInsert="true" enableSelectByPrimaryKey="false" enableSelectByExample="false"
+        enableUpdateByPrimaryKey="false" enableDeleteByPrimaryKey="false" enableDeleteByExample="false"
+        enableCountByExample="false" enableUpdateByExample="false" selectByPrimaryKeyQueryId="false"
+        selectByExampleQueryId="false">
+        <property name="useActualColumnNames" value="true"/>
+        </table> -->
+
+    </context>
+</generatorConfiguration>
