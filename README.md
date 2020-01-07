@@ -25,7 +25,7 @@
 
         $ curl -X POST \
 
-  http://127.0.0.1:9090/log/save \
+        http://127.0.0.1:9090/log/save \
 
   -H 'Content-Type: application/json;charset=UTF-8' \
 
