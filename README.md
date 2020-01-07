@@ -3,14 +3,17 @@
 依赖于springboot打造http日志收集器 同时规划分布式定时任务 结合redis、 mysql等完成基本web框架
 
 ##功能
+
 - 日志收集 (使用java直连es进行日志收集);
 - 分布式任务调度（结合redisson分布式锁进行多实例定时任务抢占）。
 
 
 ###克隆代码到本地
 
-- $ git clone https://github.com/jiasion/eslog.git
-- $ cd eslog/
+        $ git clone https://github.com/jiasion/eslog.git
+
+        $ cd eslog/
+
 ###修改配置文件
 
         $ vim src/main/resources/config/application-prod.properties
@@ -19,6 +22,7 @@
         $ mvn clean && mvn package
 
 ###访问
+
         $ curl -X POST \
   http://127.0.0.1:9090/log/save \
   -H 'Content-Type: application/json;charset=UTF-8' \
